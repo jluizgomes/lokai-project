@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@iara/shared": ["packages/shared/src"],
+      "@iara/shared/*": ["packages/shared/src/*"],
+      "@iara/database": ["packages/database/src"],
+      "@iara/database/*": ["packages/database/src/*"]
+    }
+  },
+  "references": [
+    { "path": "./apps/desktop" },
+    { "path": "./packages/shared" },
+    { "path": "./packages/database" }
+  ],
+  "exclude": ["node_modules", "dist", "build", "out"]
+}

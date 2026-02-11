@@ -1,0 +1,63 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: iara-postgres
+    environment:
+      POSTGRES_USER: iara
+      POSTGRES_PASSWORD: iara_password
+      POSTGRES_DB: iara
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./.docker-data/postgres:/var/lib/postgresql/data
+      - ./packages/database/src/postgres/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U iara -d iara"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.7.4
+    container_name: iara-qdrant
+    ports:
+      - "6433:6333"
+      - "6434:6334"
+    volumes:
+      - ./.docker-data/qdrant:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__GRPC_PORT: 6334
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:6333/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  neo4j:
+    image: neo4j:5.15-community
+    container_name: iara-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/iara_password
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      NEO4J_dbms_memory_heap_initial__size: 512m
+      NEO4J_dbms_memory_heap_max__size: 1G
+    ports:
+      - "7475:7474"  # HTTP
+      - "7688:7687"  # Bolt
+    volumes:
+      - ./.docker-data/neo4j/data:/data
+      - ./.docker-data/neo4j/logs:/logs
+      - ./.docker-data/neo4j/plugins:/plugins
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:7474"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+networks:
+  default:
+    name: iara-network

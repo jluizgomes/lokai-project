@@ -1,0 +1,52 @@
+appId: com.iara.desktop
+productName: IARA
+copyright: Copyright © 2024 IARA Team
+directories:
+  output: release/${version}
+  buildResources: resources
+
+files:
+  - dist/**/*
+  - resources/**/*
+  - "!**/*.map"
+
+mac:
+  category: public.app-category.developer-tools
+  icon: resources/icons/icon.icns
+  target:
+    - target: zip
+      arch:
+        - x64
+        - arm64
+    - target: dir
+      arch:
+        - x64
+        - arm64
+
+linux:
+  icon: resources/icons
+  category: Development
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+    - target: rpm
+      arch:
+        - x64
+
+extraResources:
+  - from: ../../agent
+    to: agent
+    filter:
+      - "**/*"
+      - "!.venv/**"
+      - "!__pycache__/**"
+      - "!*.pyc"
+
+publish:
+  provider: github
+  owner: your-username
+  repo: iara-project

@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+*.egg-info/
+.eggs/
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+.pytest_cache/
+
+# Docker volumes (local data)
+.docker-data/
+
+# IARA data directory (user data)
+.iara/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Electron builder
+release/
+
+# LLM Models (large files)
+models/
+*.gguf
+*.bin
+
+# Whisper/Piper models
+whisper-models/
+piper-voices/
+
+# Secrets
+*.pem
+*.key
+credentials.json

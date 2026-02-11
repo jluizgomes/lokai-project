@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+out
+*.lock
+pnpm-lock.yaml
+.docker-data
+.iara
+agent/.venv
