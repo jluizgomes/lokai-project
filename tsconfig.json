@@ -23,10 +23,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@iara/shared": ["packages/shared/src"],
-      "@iara/shared/*": ["packages/shared/src/*"],
-      "@iara/database": ["packages/database/src"],
-      "@iara/database/*": ["packages/database/src/*"]
+      "@lokai/shared": ["packages/shared/src"],
+      "@lokai/shared/*": ["packages/shared/src/*"],
+      "@lokai/database": ["packages/database/src"],
+      "@lokai/database/*": ["packages/database/src/*"]
     }
   },
   "references": [

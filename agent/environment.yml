@@ -1,5 +1,5 @@
-# Conda environment for IARA Agent
-name: iara-agent
+# Conda environment for Lokai Agent
+name: lokai-agent
 channels:
   - conda-forge
   - defaults

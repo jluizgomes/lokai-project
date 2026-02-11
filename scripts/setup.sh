@@ -1,10 +1,10 @@
 #!/bin/bash
-# IARA Project Setup Script
+# Lokai Project Setup Script
 
 set -e
 
 echo "========================================"
-echo "  IARA Project Setup"
+echo "  Lokai Project Setup"
 echo "========================================"
 echo ""
 
@@ -49,7 +49,7 @@ echo "========================================"
 echo "  Setting up Python environment (Conda + uv)"
 echo "========================================"
 
-CONDA_ENV_NAME="iara-agent"
+CONDA_ENV_NAME="lokai-agent"
 
 # Check if conda environment already exists
 if conda env list | grep -q "^${CONDA_ENV_NAME} "; then

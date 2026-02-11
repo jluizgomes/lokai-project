@@ -1,4 +1,4 @@
--- IARA PostgreSQL Schema
+-- Lokai PostgreSQL Schema
 -- This schema stores action logs, user preferences, sessions, and permissions
 
 -- Enable UUID extension

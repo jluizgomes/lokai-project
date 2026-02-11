@@ -1,13 +1,13 @@
-# IARA - Intelligent Adaptive Runtime Assistant
+# Lokai
 
-IARA is a desktop AI assistant that runs 100% locally on your machine. It combines natural language processing with OS automation to help you with development tasks, file management, terminal commands, and more.
+Lokai is a desktop AI assistant that runs 100% locally on your machine. It combines natural language processing with OS automation to help you with development tasks, file management, terminal commands, and more.
 
 ## Features
 
 - **Natural Language Interface**: Talk to your computer in plain English
 - **100% Local**: All processing happens on your machine - complete privacy
 - **OS Automation**: Manage files, run commands, control applications
-- **Learning**: IARA learns from your patterns to provide smarter suggestions
+- **Learning**: Lokai learns from your patterns to provide smarter suggestions
 - **Cross-Platform**: Works on macOS and Linux
 
 ## Tech Stack
@@ -43,7 +43,7 @@ IARA is a desktop AI assistant that runs 100% locally on your machine. It combin
 1. **Clone and install**:
    ```bash
    git clone <repository-url>
-   cd iara-project
+   cd lokai-project
    ./scripts/setup.sh
    ```
 
@@ -58,12 +58,12 @@ IARA is a desktop AI assistant that runs 100% locally on your machine. It combin
    pnpm dev
    ```
 
-4. **Use the hotkey**: `Cmd/Ctrl + Shift + Space` to open IARA
+4. **Use the hotkey**: `Cmd/Ctrl + Shift + Space` to open Lokai
 
 ## Project Structure
 
 ```
-iara-project/
+lokai-project/
 ├── apps/desktop/          # Electron desktop app
 │   ├── src/main/          # Electron main process
 │   ├── src/preload/       # Preload scripts
@@ -72,7 +72,7 @@ iara-project/
 │   ├── shared/            # Shared types and constants
 │   └── database/          # Database schemas
 ├── agent/                 # Python AI agent
-│   └── src/iara_agent/    # Agent code
+│   └── src/lokai_agent/   # Agent code
 │       ├── graph/         # LangGraph state machine
 │       ├── tools/         # LangChain tools
 │       ├── llm/           # LLM clients
@@ -100,7 +100,7 @@ iara-project/
 ```bash
 cd agent
 poetry install
-poetry run python -m iara_agent.main
+poetry run python -m lokai_agent.main
 ```
 
 ## Configuration
@@ -119,7 +119,7 @@ POSTGRES_PORT=5433
 
 ## Safety
 
-IARA is designed with safety in mind:
+Lokai is designed with safety in mind:
 
 - **Permission System**: Actions are classified by risk level
 - **Approval Required**: Destructive actions require user confirmation

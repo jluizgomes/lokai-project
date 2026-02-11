@@ -1,6 +1,6 @@
-# IARA Agent
+# Lokai Agent
 
-Python agent for IARA (Intelligent Adaptive Runtime Assistant) using LangGraph and LangChain.
+Python agent for Lokai using LangGraph and LangChain.
 
 ## Installation
 
@@ -13,5 +13,5 @@ uv pip install -e .
 ## Usage
 
 ```bash
-python -m iara_agent
+python -m lokai_agent
 ```

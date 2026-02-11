@@ -1,18 +1,18 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: iara-postgres
+    container_name: lokai-postgres
     environment:
-      POSTGRES_USER: iara
-      POSTGRES_PASSWORD: iara_password
-      POSTGRES_DB: iara
+      POSTGRES_USER: lokai
+      POSTGRES_PASSWORD: lokai_password
+      POSTGRES_DB: lokai
     ports:
       - "5433:5432"
     volumes:
       - ./.docker-data/postgres:/var/lib/postgresql/data
       - ./packages/database/src/postgres/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U iara -d iara"]
+      test: ["CMD-SHELL", "pg_isready -U lokai -d lokai"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -20,7 +20,7 @@ services:
 
   qdrant:
     image: qdrant/qdrant:v1.7.4
-    container_name: iara-qdrant
+    container_name: lokai-qdrant
     ports:
       - "6433:6333"
       - "6434:6334"
@@ -37,9 +37,9 @@ services:
 
   neo4j:
     image: neo4j:5.15-community
-    container_name: iara-neo4j
+    container_name: lokai-neo4j
     environment:
-      NEO4J_AUTH: neo4j/iara_password
+      NEO4J_AUTH: neo4j/lokai_password
       NEO4J_PLUGINS: '["apoc"]'
       NEO4J_dbms_security_procedures_unrestricted: apoc.*
       NEO4J_dbms_memory_heap_initial__size: 512m
@@ -60,4 +60,4 @@ services:
 
 networks:
   default:
-    name: iara-network
+    name: lokai-network

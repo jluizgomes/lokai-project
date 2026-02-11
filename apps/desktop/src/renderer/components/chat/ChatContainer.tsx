@@ -19,7 +19,7 @@ export function ChatContainer() {
 
   useEffect(() => {
     // Check agent status on mount
-    window.iara.agent.getStatus().then((status) => {
+    window.lokai.agent.getStatus().then((status) => {
       setAgentStatus(status.running ? 'connected' : 'disconnected');
     });
   }, [setAgentStatus]);
@@ -30,7 +30,7 @@ export function ChatContainer() {
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground">
             <div className="text-4xl mb-4">🤖</div>
-            <h2 className="text-lg font-semibold mb-2">Welcome to IARA</h2>
+            <h2 className="text-lg font-semibold mb-2">Welcome to Lokai</h2>
             <p className="text-sm max-w-xs">
               Your Intelligent Adaptive Runtime Assistant. Ask me to help with
               files, terminal commands, browser automation, and more.

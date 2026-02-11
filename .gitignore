@@ -50,8 +50,8 @@ coverage/
 # Docker volumes (local data)
 .docker-data/
 
-# IARA data directory (user data)
-.iara/
+# Lokai data directory (user data)
+.lokai/
 
 # Temporary files
 tmp/
@@ -74,3 +74,5 @@ piper-voices/
 *.pem
 *.key
 credentials.json
+
+.claude/

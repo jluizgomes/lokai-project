@@ -1,4 +1,4 @@
--- IARA Initial Database Setup
+-- Lokai Initial Database Setup
 -- This file initializes the database with default data
 
 -- Insert default preferences

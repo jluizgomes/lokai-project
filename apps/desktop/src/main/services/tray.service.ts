@@ -27,11 +27,11 @@ export class TrayService {
 
     this.tray = new Tray(icon.isEmpty() ? this.createDefaultIcon() : icon);
 
-    this.tray.setToolTip('IARA - Intelligent Adaptive Runtime Assistant');
+    this.tray.setToolTip('Lokai - Desktop AI Assistant');
 
     const contextMenu = Menu.buildFromTemplate([
       {
-        label: 'Show IARA',
+        label: 'Show Lokai',
         click: () => {
           this.mainWindow?.show();
           this.mainWindow?.focus();
@@ -52,7 +52,7 @@ export class TrayService {
       },
       { type: 'separator' },
       {
-        label: 'Quit IARA',
+        label: 'Quit Lokai',
         click: () => {
           app.quit();
         },
@@ -76,7 +76,7 @@ export class TrayService {
     const size = 16;
     const canvas = Buffer.alloc(size * size * 4);
 
-    // Fill with a purple color (IARA brand color)
+    // Fill with a purple color (Lokai brand color)
     for (let i = 0; i < size * size; i++) {
       canvas[i * 4] = 147;     // R
       canvas[i * 4 + 1] = 51;  // G
@@ -89,7 +89,7 @@ export class TrayService {
 
   updateStatus(status: 'connected' | 'disconnected' | 'processing'): void {
     // Update tray icon based on status
-    const tooltip = `IARA - ${status.charAt(0).toUpperCase() + status.slice(1)}`;
+    const tooltip = `Lokai - ${status.charAt(0).toUpperCase() + status.slice(1)}`;
     this.tray?.setToolTip(tooltip);
   }
 

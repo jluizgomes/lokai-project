@@ -6,15 +6,15 @@ export function Header() {
   const { setShowSettings, agentStatus } = useUIStore();
 
   const handleMinimize = () => {
-    window.iara.window.minimize();
+    window.lokai.window.minimize();
   };
 
   const handleMaximize = () => {
-    window.iara.window.maximize();
+    window.lokai.window.maximize();
   };
 
   const handleClose = () => {
-    window.iara.window.close();
+    window.lokai.window.close();
   };
 
   return (
@@ -29,7 +29,7 @@ export function Header() {
               agentStatus === 'processing' && 'bg-yellow-500 animate-pulse'
             )}
           />
-          <span className="text-sm font-semibold text-foreground">IARA</span>
+          <span className="text-sm font-semibold text-foreground">Lokai</span>
         </div>
       </div>
 

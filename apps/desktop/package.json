@@ -1,9 +1,9 @@
 {
-  "name": "@iara/desktop",
+  "name": "@lokai/desktop",
   "version": "0.1.0",
   "private": true,
-  "description": "IARA Desktop Application",
-  "author": "IARA Team",
+  "description": "Lokai Desktop Application",
+  "author": "Lokai Team",
   "main": "dist/main/index.js",
   "scripts": {
     "dev": "vite",

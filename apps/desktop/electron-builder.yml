@@ -1,6 +1,6 @@
-appId: com.iara.desktop
-productName: IARA
-copyright: Copyright © 2024 IARA Team
+appId: com.lokai.desktop
+productName: Lokai
+copyright: Copyright © 2024 Lokai Team
 directories:
   output: release/${version}
   buildResources: resources
@@ -49,4 +49,4 @@ extraResources:
 publish:
   provider: github
   owner: your-username
-  repo: iara-project
+  repo: lokai-project

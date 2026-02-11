@@ -1,10 +1,10 @@
 #!/bin/bash
-# IARA Build Script
+# Lokai Build Script
 
 set -e
 
 echo "========================================"
-echo "  IARA Production Build"
+echo "  Lokai Production Build"
 echo "========================================"
 echo ""
 

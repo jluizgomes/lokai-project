@@ -15,7 +15,7 @@ export class VoiceService extends EventEmitter {
   constructor(config?: Partial<VoiceConfig>) {
     super();
     this.config = {
-      wakeWord: 'hey iara',
+      wakeWord: 'hey lokai',
       sttEngine: 'whisper',
       ttsEngine: 'piper',
       language: 'en',

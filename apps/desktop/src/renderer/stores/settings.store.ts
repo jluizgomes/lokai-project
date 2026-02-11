@@ -132,7 +132,7 @@ export const useSettingsStore = create<SettingsState>((set) => ({
   },
   voice: {
     enabled: false,
-    wakeWord: 'hey iara',
+    wakeWord: 'hey lokai',
     sttEngine: 'whisper',
     ttsEngine: 'piper',
     language: 'en',

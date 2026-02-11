@@ -42,7 +42,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src/renderer'),
-      '@iara/shared': resolve(__dirname, '../../packages/shared/src'),
+      '@lokai/shared': resolve(__dirname, '../../packages/shared/src'),
     },
   },
   root: resolve(__dirname, 'src/renderer'),

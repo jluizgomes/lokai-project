@@ -1,8 +1,8 @@
-// IARA Neo4j Knowledge Graph Schema
+// Lokai Neo4j Knowledge Graph Schema
 // This schema represents relationships between actions, contexts, and patterns
 
 // Node types:
-// - Action: Represents an action IARA can perform
+// - Action: Represents an action Lokai can perform
 // - Context: Represents a context (directory, app, time, etc.)
 // - Pattern: Represents a learned pattern
 // - Session: Represents a user session

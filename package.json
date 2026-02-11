@@ -1,10 +1,10 @@
 {
-  "name": "iara-project",
+  "name": "lokai-project",
   "version": "0.1.0",
   "private": true,
-  "description": "IARA - Intelligent Adaptive Runtime Assistant",
+  "description": "Lokai - Desktop AI Assistant",
   "author": {
-    "name": "IARA Team"
+    "name": "Lokai Team"
   },
   "license": "MIT",
   "engines": {
@@ -13,9 +13,9 @@
   },
   "packageManager": "pnpm@8.15.4",
   "scripts": {
-    "dev": "pnpm --filter @iara/desktop dev",
-    "build": "pnpm --filter @iara/desktop build",
-    "preview": "pnpm --filter @iara/desktop preview",
+    "dev": "pnpm --filter @lokai/desktop dev",
+    "build": "pnpm --filter @lokai/desktop build",
+    "preview": "pnpm --filter @lokai/desktop preview",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
@@ -25,7 +25,7 @@
     "docker:down": "docker compose down",
     "docker:logs": "docker compose logs -f",
     "agent:install": "cd agent && poetry install",
-    "agent:dev": "cd agent && poetry run python -m iara_agent.main",
+    "agent:dev": "cd agent && poetry run python -m lokai_agent.main",
     "setup": "./scripts/setup.sh"
   },
   "devDependencies": {

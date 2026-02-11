@@ -51,7 +51,7 @@ export function PermissionsTab() {
       <section>
         <h3 className="font-medium mb-3">Permission Tiers</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          Control what actions IARA can perform. Actions requiring approval will prompt
+          Control what actions Lokai can perform. Actions requiring approval will prompt
           you before executing.
         </p>
 
@@ -128,8 +128,8 @@ export function PermissionsTab() {
         </div>
 
         <p className="text-sm text-muted-foreground mb-3">
-          IARA can only access files in these directories. Add directories you want
-          IARA to work with.
+          Lokai can only access files in these directories. Add directories you want
+          Lokai to work with.
         </p>
 
         {allowedDirectories.length === 0 ? (

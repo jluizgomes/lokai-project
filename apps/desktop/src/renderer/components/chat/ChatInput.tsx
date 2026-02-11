@@ -21,7 +21,7 @@ export function ChatInput() {
 
   useEffect(() => {
     // Listen for focus-input event
-    const unsubscribe = window.iara.on.focusInput(() => {
+    const unsubscribe = window.lokai.on.focusInput(() => {
       inputRef.current?.focus();
     });
 
@@ -61,18 +61,18 @@ export function ChatInput() {
       setIsLoading(false);
 
       // Setup streaming listeners
-      const unsubscribeToken = window.iara.agent.onStreamToken((token) => {
+      const unsubscribeToken = window.lokai.agent.onStreamToken((token) => {
         appendToStreamingMessage(token);
       });
 
-      const unsubscribeComplete = window.iara.agent.onStreamComplete((response) => {
+      const unsubscribeComplete = window.lokai.agent.onStreamComplete((response) => {
         completeStreamingMessage(response);
         setAgentStatus('connected');
         unsubscribeToken();
         unsubscribeComplete();
       });
 
-      const unsubscribeError = window.iara.agent.onStreamError((error) => {
+      const unsubscribeError = window.lokai.agent.onStreamError((error) => {
         setError(error);
         setIsStreaming(false);
         setAgentStatus('connected');
@@ -82,7 +82,7 @@ export function ChatInput() {
       });
 
       // Send message with streaming
-      await window.iara.agent.sendMessageStreaming(trimmedInput);
+      await window.lokai.agent.sendMessageStreaming(trimmedInput);
     } catch (error) {
       setError((error as Error).message);
       setIsLoading(false);
@@ -100,7 +100,7 @@ export function ChatInput() {
 
   const handleCancel = async () => {
     try {
-      await window.iara.agent.cancel();
+      await window.lokai.agent.cancel();
       setIsLoading(false);
       setIsStreaming(false);
       setAgentStatus('connected');
@@ -118,7 +118,7 @@ export function ChatInput() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask IARA anything..."
+            placeholder="Ask Lokai anything..."
             disabled={isLoading || isStreaming}
             rows={1}
             className={cn(

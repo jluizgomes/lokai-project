@@ -13,17 +13,17 @@ function App() {
 
   useEffect(() => {
     // Listen for focus-input event from main process
-    const unsubscribeFocus = window.iara.on.focusInput(() => {
+    const unsubscribeFocus = window.lokai.on.focusInput(() => {
       // Focus will be handled by ChatInput component
     });
 
     // Listen for open-settings event from main process
-    const unsubscribeSettings = window.iara.on.openSettings(() => {
+    const unsubscribeSettings = window.lokai.on.openSettings(() => {
       setShowSettings(true);
     });
 
     // Listen for approval requests
-    const unsubscribeApproval = window.iara.approval.onShowApproval((request) => {
+    const unsubscribeApproval = window.lokai.approval.onShowApproval((request) => {
       setApprovalRequest(request);
     });
 

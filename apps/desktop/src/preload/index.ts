@@ -89,11 +89,11 @@ const api = {
 };
 
 // Expose API to renderer
-contextBridge.exposeInMainWorld('iara', api);
+contextBridge.exposeInMainWorld('lokai', api);
 
 // Type declarations for the exposed API
 declare global {
   interface Window {
-    iara: typeof api;
+    lokai: typeof api;
   }
 }

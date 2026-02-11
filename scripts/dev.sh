@@ -1,10 +1,10 @@
 #!/bin/bash
-# IARA Development Server Script
+# Lokai Development Server Script
 
 set -e
 
 echo "========================================"
-echo "  IARA Development Server"
+echo "  Lokai Development Server"
 echo "========================================"
 echo ""
 

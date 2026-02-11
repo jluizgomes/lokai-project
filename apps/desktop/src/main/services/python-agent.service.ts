@@ -56,7 +56,7 @@ export class PythonAgentService extends EventEmitter {
     console.log('Starting Python agent from:', agentPath);
 
     try {
-      this.process = spawn(pythonPath, ['-m', 'iara_agent.main'], {
+      this.process = spawn(pythonPath, ['-m', 'lokai_agent.main'], {
         cwd: agentPath,
         stdio: ['pipe', 'pipe', 'pipe'],
         env: {

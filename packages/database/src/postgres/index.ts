@@ -1,5 +1,5 @@
 export const POSTGRES_SCHEMA = `
--- IARA PostgreSQL Schema
+-- Lokai PostgreSQL Schema
 -- This schema stores action logs, user preferences, sessions, and permissions
 
 -- Enable UUID extension
@@ -111,7 +111,7 @@ export interface PostgresConfig {
 export const DEFAULT_POSTGRES_CONFIG: PostgresConfig = {
   host: 'localhost',
   port: 5433,
-  database: 'iara',
-  user: 'iara',
-  password: 'iara_password',
+  database: 'lokai',
+  user: 'lokai',
+  password: 'lokai_password',
 };

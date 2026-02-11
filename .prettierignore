@@ -5,5 +5,5 @@ out
 *.lock
 pnpm-lock.yaml
 .docker-data
-.iara
+.lokai
 agent/.venv

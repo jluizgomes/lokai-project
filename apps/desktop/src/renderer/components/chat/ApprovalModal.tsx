@@ -15,7 +15,7 @@ export function ApprovalModal({ request, onClose }: ApprovalModalProps) {
   const handleApprove = async () => {
     setIsSubmitting(true);
     try {
-      await window.iara.approval.respond(request.id, {
+      await window.lokai.approval.respond(request.id, {
         approved: true,
         remember: rememberChoice,
       });
@@ -30,7 +30,7 @@ export function ApprovalModal({ request, onClose }: ApprovalModalProps) {
   const handleDeny = async () => {
     setIsSubmitting(true);
     try {
-      await window.iara.approval.respond(request.id, {
+      await window.lokai.approval.respond(request.id, {
         approved: false,
         remember: rememberChoice,
       });

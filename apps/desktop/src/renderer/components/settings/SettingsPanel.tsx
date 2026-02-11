@@ -159,7 +159,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             <div className="space-y-6">
               <section className="text-center">
                 <div className="text-6xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold">IARA</h3>
+                <h3 className="text-xl font-bold">Lokai</h3>
                 <p className="text-sm text-muted-foreground">
                   Intelligent Adaptive Runtime Assistant
                 </p>
@@ -169,7 +169,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
               <section>
                 <h4 className="font-medium mb-2">About</h4>
                 <p className="text-sm text-muted-foreground">
-                  IARA is a desktop AI assistant that runs 100% locally on your machine.
+                  Lokai is a desktop AI assistant that runs 100% locally on your machine.
                   It combines natural language processing with OS automation to help you
                   with development tasks, file management, and more.
                 </p>

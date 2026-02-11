@@ -18,7 +18,7 @@ export function LearningDashboard() {
       <section>
         <h3 className="font-medium mb-3">Learning Dashboard</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          IARA learns from your patterns to provide smarter suggestions over time.
+          Lokai learns from your patterns to provide smarter suggestions over time.
           This dashboard shows what patterns have been detected.
         </p>
 
@@ -64,7 +64,7 @@ export function LearningDashboard() {
           <div className="text-center py-8 text-sm text-muted-foreground border border-dashed border-border rounded-lg">
             <p>No patterns detected yet</p>
             <p className="text-xs mt-1">
-              Patterns will appear here as you use IARA
+              Patterns will appear here as you use Lokai
             </p>
           </div>
         ) : (
@@ -87,7 +87,7 @@ export function LearningDashboard() {
             <div>
               <span className="text-sm">Enable pattern learning</span>
               <p className="text-xs text-muted-foreground">
-                Allow IARA to detect and learn from your usage patterns
+                Allow Lokai to detect and learn from your usage patterns
               </p>
             </div>
           </label>
